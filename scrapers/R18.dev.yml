@@ -57,6 +57,10 @@ jsonScrapers:
           selector: actresses.#.name_kanji
       Image:
         selector: jacket_full_url
+        postProcess:
+          - replace:
+              - regex: https://pics\.dmm\.co\.jp/mono/movie/adult/
+                with: https://awsimgsrc.dmm.com/dig/mono/movie/
       Director:
         selector: directors.#.name_romaji
       Details:
